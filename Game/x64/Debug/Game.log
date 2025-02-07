@@ -1,0 +1,6 @@
+﻿  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\fanto\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
+  Game.cpp
+C:\Users\fanto\projects\cpp\LeetCode\Game\Game.cpp(18,12): warning C4305: инициализация: усечение из "double" в "float"
+C:\Users\fanto\projects\cpp\LeetCode\Game\Game.cpp(131,21): warning C4305: инициализация: усечение из "double" в "float"
+C:\Users\fanto\projects\cpp\LeetCode\Game\Game.cpp(139,17): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+  Game.vcxproj -> C:\Users\fanto\projects\cpp\LeetCode\Game\x64\Debug\Game.exe
