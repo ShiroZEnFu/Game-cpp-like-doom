@@ -57,7 +57,7 @@ public:
         int ix = static_cast<int>(x);
         int iy = static_cast<int>(y);
         if (ix < 0 || ix >= width || iy < 0 || iy >= height) {
-            return true; // Считаем границы картами стеной
+            return true;
         }
         return layout[iy * width + ix] == '#';
     }
@@ -87,7 +87,6 @@ public:
         fFOV(3.14159f / 4.0f), fDepth(16.0f),
         dwBytesWritten(0)
     {
-        // Настройка консоли
         screen = new wchar_t[nScreenWidth * nScreenHeight];
         hConsole = CreateConsoleScreenBuffer(GENERIC_READ | GENERIC_WRITE, 0, NULL, CONSOLE_TEXTMODE_BUFFER, NULL);
         SetConsoleActiveScreenBuffer(hConsole);
@@ -240,8 +239,8 @@ private:
 
 int main()
 {
-    // Создаем экземпляр игры и запускаем ее
     Game console3DGame;
     console3DGame.run();
     return 0;
+
 }
