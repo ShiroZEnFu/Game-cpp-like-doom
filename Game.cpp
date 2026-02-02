@@ -93,7 +93,7 @@ public:
 
         COORD coord = { (short)nScreenWidth, (short)nScreenHeight };
         SetConsoleScreenBufferSize(hConsole, coord);
-        SMALL_RECT rect = { 0, 0, (short)nScreenWidth - 1, (short)nScreenHeight - 1 };
+        SMALL_RECT rect = { 0, 0, (short)(nScreenWidth - 1), (short)(nScreenHeight - 1) };
         SetConsoleWindowInfo(hConsole, TRUE, &rect);
     }
 
@@ -222,7 +222,7 @@ private:
         drawOverlay(fElapsedTime);
 
         screen[nScreenWidth * nScreenHeight - 1] = '\0';
-        WriteConsoleOutputCharacter(hConsole, screen, nScreenWidth * nScreenHeight, { 0,0 }, &dwBytesWritten);
+        WriteConsoleOutputCharacterW(hConsole, screen, nScreenWidth * nScreenHeight, { 0,0 }, &dwBytesWritten);
     }
 
     void drawOverlay(float fElapsedTime) {
